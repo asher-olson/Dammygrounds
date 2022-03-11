@@ -4,6 +4,7 @@ import './App.css';
 import Card from './Card';
 import Board from './Board';
 import CardObj from './CardObj';
+import Draggable from "react-draggable";
 const uuid = require('react-uuid');
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
   return (
     <div className="App">
       <Board playerSide={playerCards} tavernSide={tavernCards} />
+      <Draggable>
+        <div>I can be moved pog!</div>
+      </Draggable>
     </div>
   );
 }

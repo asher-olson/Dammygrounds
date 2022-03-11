@@ -10,8 +10,8 @@ interface SideProps {
 
 const Side:FC<SideProps> = (props) => {
   return (
-    <div className={props.class}>{props.cards.map((card) => {
-        return <Card id={card.id} name={card.name} attack={card.attack} health={card.health} text={card.text} />
+    <div className={props.class + " side"}>{props.cards.map((card) => {
+        return <Card id={card.id} name={card.name} attack={card.attack} health={card.health} text={card.text} type={card.type} />
     })}</div>
   )
 }
